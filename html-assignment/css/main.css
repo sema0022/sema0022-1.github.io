@@ -1,0 +1,48 @@
+/* Changing font family, increasing font size to 18px */
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+}
+
+/* Adding same background colour to header and footer */
+header, footer{
+    background-color: rgb(206, 146, 146);
+}
+
+/* Selecting class "site-title" to change colour of main heading */
+.site-title{
+    color: white;
+}
+
+/* Adding box-shadow to image */
+#my-image{
+    box-shadow: 0px 0px 2px 1px black;
+}
+
+/* Replacing bullets in hobbies list with squares */
+article ul{
+    list-style: square;
+}
+
+/* Adding a background to odd list items */
+article ul li:nth-child(odd){
+    background-color: rgb(235, 198, 198);
+}
+
+/* Removing bullets from navigation */
+nav ul{
+    list-style: none;
+}
+
+/* Removing underline from links & adding background and border */
+nav ul a{
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid black;
+}
+
+/* Changing colour of links on hover or focus states */
+nav ul a:hover, nav ul a:focus{
+    background-color: rgb(88, 29, 29);
+    color: white;
+}
