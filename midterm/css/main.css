@@ -44,3 +44,14 @@ table {
 }
 
 /*********** CUSTOM CSS ***********/
+
+/* Adjusting properties common to all body content*/
+body{
+	font-family: sans-serif;
+	color: black;
+	background-color: #aad4cf;
+}
+/* Centering content */
+.container{
+	margin: 0 auto;
+}
