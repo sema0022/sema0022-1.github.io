@@ -1,57 +1,115 @@
-/*********** CSS RESET ***********/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-} */
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+/* Setting box-sizing for all elements */
+html{
+	box-sizing: border-box;
 }
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+*,
+*:before,
+*:after{
+	box-sizing: inherit;
 }
 
-/*********** CUSTOM CSS ***********/
+/* Centering content, adding background to area */
+.container{
+	max-width: 1024px;
+	margin: 0 auto;
+	background-color: rgba(255, 255, 255, 0.5);
+}
 
-/* Adjusting properties common to all body content*/
+/* Adjusting properties common to all body content */
 body{
 	font-family: sans-serif;
 	color: black;
 	background-color: #aad4cf;
 }
-/* Centering content */
-.container{
-	margin: 0 auto;
+
+/* Adding padding to main content*/
+main{
+	padding: 0 1rem;
+}
+
+/* Styling headings */
+h1{
+	color: white;
+	font-size: 3.5rem;
+	font-weight: normal;
+}
+h2{
+	font-size: 2rem;
+}
+h3{
+	font-size: 1.5rem;
+}
+
+/* Positioning site title over header image */
+h1{
+	position: absolute;
+	top: 47%;
+	left: 34%;
+}
+.site-header{
+	position: relative;
+}
+
+/* Styling navigation */
+nav ul{
+	list-style: none;
+}
+nav ul li{
+	display: inline-block;
+	padding: 0.5em 7em;
+	margin-top: -1em;
+	border-right: 2px solid darkslategray;
+}
+nav ul li:last-child{
+	border-right: none;
+}
+nav ul a{
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+}
+
+/* Floating article image to wrap text & resizing */
+article img{
+	float:left;
+	width: 25%;
+	margin: 0 1rem 1rem 0;
+}
+
+/* Applying clearfix after floating article image */
+.clearfix:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Styling contact form */
+form{
+	border: 1px solid black;
+	box-shadow: 0 0 1px 0 black;
+	padding: 1rem;
+}
+#fullname,
+#email,
+#message{
+	display: block;
+	width: 100%;
+}
+button{
+	display: block;
+}
+
+/* Styling footer */
+footer{
+	text-align: right;
+}
+
+/* Positioning and styling "Back to top" link */
+body>a{
+	position: fixed;
+	bottom: 5%;
+	right: 5%;
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
 }
