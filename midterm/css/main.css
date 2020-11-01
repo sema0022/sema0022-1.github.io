@@ -140,6 +140,7 @@ button{
 
 /* Styling mouse-related states */
 /* Visited */
+a:link,
 a:visited{
 	color: black;
 }
