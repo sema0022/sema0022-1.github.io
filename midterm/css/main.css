@@ -1,4 +1,4 @@
-/* Setting box-sizing for all elements */
+/* Setting box-sizing in advance for all elements */
 html{
 	box-sizing: border-box;
 }
@@ -8,108 +8,153 @@ html{
 	box-sizing: inherit;
 }
 
-/* Centering content, adding background to area */
+/* Centering content, adding background to defined area */
 .container{
 	max-width: 1024px;
 	margin: 0 auto;
 	background-color: rgba(255, 255, 255, 0.5);
 }
 
-/* Adjusting properties common to all body content */
+/* Adjusting properties common to body content */
 body{
 	font-family: sans-serif;
 	color: black;
 	background-color: #aad4cf;
 }
 
-/* Adding padding to main content*/
+/* Adding padding to left and right of main content*/
 main{
 	padding: 0 1rem;
-}
-
-/* Styling headings */
-h1{
-	color: white;
-	font-size: 3.5rem;
-	font-weight: normal;
-}
-h2{
-	font-size: 2rem;
-}
-h3{
-	font-size: 1.5rem;
 }
 
 /* Positioning site title over header image */
 h1{
 	position: absolute;
-	top: 47%;
-	left: 34%;
+	bottom: 2.5rem;
+	width: 100%;
+	text-align: center;
+	/* Styling site title text */
+	color: white;
+	font-size: 3.5rem;
+	font-weight: normal;
 }
+/* The absolute position of the site title is relative to the header image in class "site-header" */
 .site-header{
 	position: relative;
 }
 
-/* Styling navigation */
-nav ul{
-	list-style: none;
+/* Adjusting font sizes and margins of headings */
+h2{
+	font-size: 2rem;
+	margin-bottom: 1rem;
 }
-nav ul li{
-	display: inline-block;
-	padding: 0.5em 7em;
-	margin-top: -1em;
-	border-right: 2px solid darkslategray;
+h3{
+	font-size: 1.7rem;
+	margin-bottom: 1rem;
 }
-nav ul li:last-child{
-	border-right: none;
-}
-nav ul a{
-	text-decoration: none;
-	text-transform: uppercase;
+h4{
 	font-size: 1.4rem;
+	margin: 1rem 0;
 }
 
-/* Floating article image to wrap text & resizing */
+/* Styling navigation */
+/* Removing list style and default padding, margins*/
+nav ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+/* Displaying list inline while maintaining block properties; setting width and padding*/
+nav ul li{
+	display: inline-block;
+	width: 33%;
+	padding: 0.5rem;
+	/* Creating "separators" using border property */
+	border-left: 1px solid slategray;
+}
+/* Removing initial "separator" */
+nav ul li:first-child{
+	border-left: none;
+}
+/* Styling navigation links */
+nav ul a{
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+/* Floating article image to wrap text; resizing image and adding margin */
 article img{
 	float:left;
 	width: 25%;
 	margin: 0 1rem 1rem 0;
 }
-
-/* Applying clearfix after floating article image */
-.clearfix:after{
-	content: "";
-	display: table;
-	clear: both;
+/* Adjusting line height of article paragraph */
+article p{
+	line-height: 1.4rem;
 }
 
-/* Styling contact form */
+/* Clearing float on element after article (facts list) */
+.facts{
+	clear: left;
+}
+/* Aligning bullets with header */
+.facts ul{
+	padding-left: 1.3rem;
+}
+
+/* Adding border, padding to contact form */
 form{
 	border: 1px solid black;
-	box-shadow: 0 0 1px 0 black;
 	padding: 1rem;
 }
+/* Making sure input fields take up the width of the form */
 #fullname,
 #email,
 #message{
 	display: block;
 	width: 100%;
+	/* Removing border */
+	border: none;
 }
+
+
+/* Increasing font size and margins of labels */
+label{
+	display: inline-block;
+	font-size: 1.1rem;
+	font-weight: bold;
+	margin: 1rem 0 0.5rem 0;
+}
+/* Styling button */
 button{
 	display: block;
+	background: none;
+	text-transform: uppercase;
+	padding: 0.5rem;
+	margin-top: 1rem;
+}
+
+/* Styling mouse-related states */
+/* Visited */
+a:visited{
+	color: black;
+}
+/* Hover */
+a:hover,
+button:hover{
+	text-decoration: underline;
+}
+/* Active */
+a:active{
+	border: 2px solid black;
 }
 
 /* Styling footer */
 footer{
 	text-align: right;
-}
-
-/* Positioning and styling "Back to top" link */
-body>a{
-	position: fixed;
-	bottom: 5%;
-	right: 5%;
-	text-decoration: none;
-	font-weight: bold;
-	color: white;
+	padding: 2rem;
 }
