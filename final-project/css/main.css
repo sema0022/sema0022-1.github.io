@@ -54,7 +54,9 @@ table {
                 CUSTOM CSS 
 **************************************** */
 
-/*********** Default Styles ********** */
+/* ****************************************
+				Default Styles 
+**************************************** */
 
 /* Box-sizing code for all elements */
 *,
@@ -64,17 +66,10 @@ table {
     line-height: inherit;
 }
 
-/* Clearfix code for floated elements (add class clearfix to html) */
-.clearfix::after{
-    content: "";
-    display: table;
-    clear: both;
-}
-
 /* Applying common styles  */
 html{
 	font-family: 'Open Sans', sans-serif;
-	font-size: 16px;
+	font-size: 14px;
 	box-sizing: border-box;  
 }
 body{
@@ -85,6 +80,7 @@ body{
 .container{
 	max-width: 1200px;
 	margin: 0 auto;
+	padding: 1rem;
 }
 
 /* Images are the width of their container, except logo */
@@ -101,7 +97,7 @@ h2,
 h3,
 h4{
 	font-weight: bold;
-	margin: 0.5em 1rem 0;
+	margin: 0.3em 0;
 }
 h1{
 	font-size: 5.5rem;
@@ -110,7 +106,7 @@ h2{
 	font-size: 3.7rem;
 }
 h3{
-	font-size: 2.4rem;
+	font-size: 2.3rem;
 }
 h4{
 	font-size: 1.3rem;
@@ -118,17 +114,18 @@ h4{
 
 /* Spacing paragraphs */
 p{
-	margin: 1rem;
+	margin: 1rem 0;
 }
 
-/*********** Mobile Styles ********** */
+/* **************************************** 
+				Mobile Styles 
+**************************************** */
+
+/* ********* Site Header ********* */
 
 /* Styling navigation */
 .site-header{
 	background-color: #222;
-}
-.nav-list{
-	padding: 1rem;
 }
 .nav-list li{
 	font-size: 1.3rem;
@@ -151,7 +148,7 @@ p{
 .nav-list a:hover,
 .nav-list a:focus,
 .nav-list a.current{
-color: white;
+color: #222;
 background-color: #c78c06;
 }
 
@@ -175,10 +172,10 @@ background-color: #c78c06;
 
 /* Styling banner */
 .banner{
-	background: #c78c06 url(../images/main-banner.jpg) no-repeat;
-	background-position: center center;
+	background: #222 url(../images/main-banner.jpg) no-repeat;
+	background-position: center;
 	background-size: cover;
-	height: 1000px;
+	height: 650px;
 	display: flex;
 	align-items: center;
 }
@@ -194,5 +191,255 @@ background-color: #c78c06;
 	background-color: #c78c06;
 	text-decoration: none;
 	padding: 1.5em;
-	margin: 0 1rem 1rem 1rem;
+}
+
+/* ********* About Section ********* */
+/* Background & spacing */
+#about{
+	background-color: #ffe6ac;
+}
+
+/* ********* Our Services Section ********* */
+/* Background and spacing */
+.card{
+	background-color: #ffe6ac;
+	margin: 1rem 0;
+}
+.card .info{
+	padding: 1rem;
+}
+
+/* Buttons */
+.service-btn{
+	display: inline-block;
+	font-size: 1.5rem;
+	color: white;
+	background-color: #222;
+	text-decoration: none;
+	padding: 1.5em;
+}
+
+/* ********* Our Vision Section ********* */
+/* Adding background image */
+.vision{
+	background: #222 url(../images/vision.jpg) no-repeat;
+	background-size: cover;
+	background-position: center center;
+	color: white;
+}
+
+/* Button */
+.vision-btn{
+	display: inline-block;
+	font-size: 1.5rem;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.5);
+	text-decoration: none;
+	padding: 1.5em;
+	border: 1px solid #c78c06;
+}
+
+/* ********* Our Team Section ********* */
+/* Background & spacing */
+.john,
+.bob{
+	background-color: #ffe6ac;
+	margin: 1rem 0;
+}
+.john-info,
+.bob-info{
+	padding: 1rem;
+}
+
+/* Adding underline after job title */
+#team h4{
+	border-bottom: 2px solid #c78c06;
+}
+#team h3,
+#team h4{
+	margin: 0;
+}
+
+/* ********* Contact Us Section ********* */
+/* Styling form */
+.message-form label,
+.message-form input,
+.message-form textarea{
+	display: block;
+	width: 100%;
+}
+.message-form label{
+	margin: 1rem 0 0.3rem 0;
+}
+
+/* Styling form button */
+.message-form button{
+	background-color: #222;
+	color: #c78c06;
+	font-size: 1.5rem;
+	margin-top: 1rem;
+}
+
+/* Styling table for hours of operation */
+table{
+	width: 100%;
+}
+thead{
+	background-color: #ffe6ac;
+}
+th,
+td{
+	border: 1px solid black;
+	padding: 1em;
+}
+tr{
+	display: grid;
+	grid-template-columns: 3fr 2fr;
+}
+
+/* Map */
+iframe{
+	width: 100%;
+}
+
+/* ********* Site Footer ********* */
+/* Styling footer */
+.site-footer{
+	background-color: #222;
+	color: #c78c06;
+}
+/* Footer link */
+.site-footer a,
+.site-footer a:link,
+.site-footer a:visited{
+	color: inherit;
+}
+/* **************************************** 
+			Desktop Styles
+******************************************/
+/* Media query for screens 760px and above */
+@media screen and (min-width: 750px){
+
+	/* Increasing font size */
+	html{
+		font-size: 16px;
+	}
+
+	/* *********Site Header ********* */
+	/* Styling navigation (horizontal layout) */
+	.nav-list{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.nav-list a,
+	.nav-list a:link,
+	.nav-list a:visited{
+		padding: 1rem 2rem;
+	}
+	.nav-list .logo,
+	.logo a:hover,
+	.logo a:focus{
+		background: none;
+	}
+
+	/* ********* About Us Section ********* */
+	/* Placing image on the left, text on the right */
+	#about .container{
+		display: flex;
+		justify-content: space-between;
+	}
+	#about img{
+		width: 50%;
+		padding-right: 1rem;
+	}
+
+	/* ********* Our Services Section ********* */
+	/* Removing margin on items */
+	.card{
+		margin: 0;
+	}
+
+	/* Putting items into grid format */
+	#services .container{
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: auto;
+		gap: 1rem;
+		grid-template-areas: "h2 h2 h2 h2 h2 h2"
+							 "dig dig dig mark mark mark"
+							 "vid vid web web prnt prnt";
+		margin-bottom: 1rem;
+	}
+	#services h2{
+		grid-area: h2;
+	}
+	.digital{
+		grid-area: dig;
+	}
+	.marketing{
+		grid-area: mark;
+	}
+	.video{
+		grid-area: vid;
+	}
+	.web{
+		grid-area: web;
+	}
+	.print{
+		grid-area: prnt;
+	}
+
+	/* Adjusting button size */
+	.service-btn{
+		width: 100%;
+		text-align: center;
+	}
+	
+	/* ********* Our Team Section ********* */
+	/* Removing margin from items */
+	.john,
+	.bob{
+		margin: 0;
+	}
+	/* Putting items into grid format */
+	.john{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.bob{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: "text photo";
+	}
+	.bob-img{
+		grid-area: photo;
+	}
+	.bob-info{
+		grid-column: text;
+	}
+
+	/* ********* Contact Us Section ********* */
+	/* Putting items into grid format*/
+	#contact .container{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+		gap: 1rem;
+		grid-template-areas: "heading heading"
+							 "message map"
+							 "hours hours";
+	}
+	#contact h2{
+		grid-area: heading;
+	}
+	.message-form{
+		grid-area: message;
+	}
+	.location{
+		grid-area: map;
+	}
+	.hours-table{
+		grid-area: hours;
+	}
 }
